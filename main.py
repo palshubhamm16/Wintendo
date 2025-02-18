@@ -9,7 +9,7 @@ pygame.font.init()  # Initialize the font module
 
 # Global Variables For The Game
 FPS = 60
-SCREENWIDTH = 900
+SCREENWIDTH = 600
 SCREENHEIGHT = 900
 SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 FPSCLOCK = pygame.time.Clock()
@@ -38,7 +38,7 @@ import pygame
 from pygame.locals import *
 FPS = 32
 SCREENWIDTH = 900
-SCREENHEIGHT = 900
+SCREENHEIGHT = 800
 SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 GROUNDY = SCREENHEIGHT * 0.8
 GAME_SPRITES = {}
@@ -64,7 +64,7 @@ game_font = pygame.font.Font('Font/PoetsenOne-Regular.ttf', 25)
 
 #welcome
 background_image = pygame.image.load("sprites/ss.png").convert()
-background_image = pygame.transform.scale(background_image, (800,900))
+background_image = pygame.transform.scale(background_image, (800,800))
 
 background_rect = background_image.get_rect()
 
@@ -114,7 +114,7 @@ def welcome_screen():
         SCREEN.blit(snake_game_text, snake_game_rect)
 
         # Draw selection indicator
-        pygame.draw.rect(SCREEN, RED, (flappy_bird_rect.x - 230, flappy_bird_rect.y + 110 + selected_game * 175, 30, 30), 0)
+        pygame.draw.rect(SCREEN, RED, (flappy_bird_rect.x - 230, flappy_bird_rect.y - 45 + selected_game * 245, 30, 30), 0)
 
         pygame.display.flip()
         FPSCLOCK.tick(FPS)

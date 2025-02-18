@@ -1,0 +1,1 @@
+intal pygame to run
